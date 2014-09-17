@@ -10,19 +10,19 @@
 
 @implementation SimpleCalculator
 
-- (NSInteger) increaseNumberBy1:(NSInteger) number {
-    /* WORK HERE */
-    return number;
+- (NSInteger) increaseNumberBy1:(NSInteger) sourceNumber {
+    NSInteger resultNumber = sourceNumber + 1;
+    return resultNumber;
 }
 
-- (NSInteger) addNumber:(NSInteger) number1 toNumber:(NSInteger) number2 {
-    /* WORK HERE */
-    return number1;
+- (NSInteger) addNumber:(NSInteger) firstOperand toNumber:(NSInteger) secondOperand {
+    NSInteger resultNumber = firstOperand + secondOperand;
+    return resultNumber;
 }
 
 - (NSInteger) remainderOfNumber:(NSInteger) dividend dividedByNumber:(NSInteger) divisor {
-    /* WORK HERE */
-    return 0;
+    NSInteger remainder = dividend % divisor;
+    return remainder;
 }
 
 @end
