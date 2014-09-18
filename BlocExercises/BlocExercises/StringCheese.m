@@ -22,10 +22,10 @@
     NSRange cheeseRemoval = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
     NSString *cheeseAfterRemoval = [cheeseName stringByReplacingCharactersInRange:cheeseRemoval withString:@""];
     
-    if (cheeseRemoval.location != NSNotFound) {
-        return cheeseAfterRemoval;
+    if (cheeseRemoval.length != 7) {
+        return cheeseName;
     } else
-    return cheeseName;
+    return cheeseAfterRemoval;
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
