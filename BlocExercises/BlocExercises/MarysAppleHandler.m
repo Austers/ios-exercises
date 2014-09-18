@@ -11,24 +11,18 @@
 @implementation MarysAppleHandler
 
 - (NSString *) itemMaryCanPurchaseForDollars:(NSInteger)dollars {
-    NSMutableString *itemToReturn = [NSMutableString stringWithFormat:@""];
-
-    NSString *getOut = [NSString stringWithFormat:@"get out of my store"];
-    NSString *haveGum = [NSString stringWithFormat:@"have some gum"];
-    NSString *haveApple = [NSString stringWithFormat:@"have an apple"];
-    NSString *haveAppleComputer = [NSString stringWithFormat:@"have an Apple computer"];
-    NSString *haveBigApple = [NSString stringWithFormat:@"have The Big Apple"];
+    NSString *itemToReturn;
     
     if (dollars == 4) {
-        [itemToReturn setString:getOut];
+        itemToReturn = @"get out of my store";
     } else if (dollars == 5) {
-        [itemToReturn setString:haveGum];
+        itemToReturn = @"have some gum";
     } else if (dollars ==6) {
-        [itemToReturn setString:haveApple];
+        itemToReturn = @"have an apple";
     } else if (dollars == 1000) {
-        [itemToReturn setString:haveAppleComputer];
+        itemToReturn = @"have an Apple computer";
     } else if (dollars == 1000000000) {
-        [itemToReturn setString:haveBigApple];
+        itemToReturn = @"have The Big Apple";
     }
     
     NSLog(@"For $%ld, Mary can: %@", (long)dollars, itemToReturn);
@@ -38,9 +32,11 @@
 - (NSUInteger) dollarCostForAppleFlavoredVodka {
 
     NSUInteger cost = 24;
-    
-    if (self.getsDiscount) {
-        cost *= .75;
+   
+    if (self.getsDiscount == NO) {
+        cost = 24;
+    } else if (self.getsDiscount == YES) {
+        cost = 18;
     }
     return cost;
 }
