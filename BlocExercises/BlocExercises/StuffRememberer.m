@@ -11,7 +11,9 @@
 @implementation StuffRememberer
 
 - (void) rememberThisArrayForLater:(NSMutableArray *)arrayToRemember {
-    /* WORK HERE */
+   
+    [self.storedArray addObjectsFromArray:arrayToRemember];
+    
 }
 
 - (void) copyThisArrayForLater:(NSMutableArray *)arrayToCopy {
@@ -23,8 +25,11 @@
 }
 
 - (NSMutableArray *) arrayYouShouldRemember {
-    /* WORK HERE */
-    return [@[] mutableCopy];
+    
+    
+    
+    return [self.storedArray getObjects]
+    
 }
 
 - (NSMutableArray *) arrayYouShouldCopy {

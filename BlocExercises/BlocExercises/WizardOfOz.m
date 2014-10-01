@@ -11,12 +11,10 @@
 @implementation WizardOfOz
 
 - (BOOL) switchesFromBlackAndWhiteToColor {
-    /* WORK HERE */
     return YES;
 }
 
 - (NSString *) mainCharacter {
-    /* WORK HERE */
     return @"Dorothy";
 }
 
